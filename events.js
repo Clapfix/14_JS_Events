@@ -1,22 +1,16 @@
 /******* Variablen ********/
 const btn = document.getElementById("trigBtn");
-//const btn = document.body;
-output(btn);
+let appStatus =true;
 
 /******* Event-Listener *********/
 
-btn.addEventListener("click",test);
-btn.addEventListener("mouseenter",testEnter);
+btn.addEventListener("click",toggleAppStatus);
 
-function test(){
-    output("Btn clicked!");
+/****** Business-Logic | Toggle ******/
+function toggleAppStatus(){
+    appStatus = !appStatus;
+    output(appStatus);
 }
-
-function testEnter(){
-    output("Mouse entered!");
-}
-
-
 
 
 
